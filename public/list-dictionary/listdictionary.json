@@ -1,0 +1,74 @@
+[
+  {
+    "key": "token",
+    "value": "Token"
+  },
+  {
+    "key": "useraccess",
+    "value": "User Access"
+  },
+  {
+    "key": "useraccess.UserName",
+    "value": "User Name"
+  },
+  {
+    "key": "useraccess.EmpNo",
+    "value": "Employee No"
+  },
+  {
+    "key": "useraccess.OfficeId",
+    "value": "Office Id"
+  },
+  {
+    "key": "useraccess.OfficeCode",
+    "value": "Office Code"
+  },
+  {
+    "key": "useraccess.OfficeName",
+    "value": "Office Name"
+  },
+  {
+    "key": "useraccess.MrOfficeTypeCode",
+    "value": "Office Type Code"
+  },
+  {
+    "key": "useraccess.RoleCode",
+    "value": "Role Code"
+  },
+  {
+    "key": "useraccess.RoleName",
+    "value": "Role Name"
+  },
+  {
+    "key": "useraccess.JobTitleCode",
+    "value": "Job Title Code"
+  },
+  {
+    "key": "useraccess.JobTitleName",
+    "value": "Job Title Name"
+  },
+  {
+    "key": "useraccess.BusinessDt",
+    "value": "Business Date"
+  },
+  {
+    "key": "useraccess.BusinessDtStr",
+    "value": "Business Date String"
+  },
+  {
+    "key": "useraccess.Email",
+    "value": "Email"
+  },
+  {
+    "key": "useraccess.CoyName",
+    "value": "Company Name"
+  },
+  {
+    "key": "listTemp",
+    "value": "List Temp"
+  },
+  {
+    "key": "listTemp.length",
+    "value": "List Temp Size"
+  }
+]

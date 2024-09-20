@@ -1,0 +1,190 @@
+{
+  "id": "Hsbcustomcobe",
+  "name": "HsbCustomCobe",
+  "saveState": false,
+  "customComponent": [
+    {
+      "table": {
+        "isFromApi": true,
+        "title": "Industry List",
+        "resultData": "",
+        "isSubsection": true,
+        "tableInput": {
+          "isSeq": true,
+          "headerList": [
+            {
+              "type": "label",
+              "label": "KBLI",
+              "position": "center"
+            },
+            {
+              "type": "label",
+              "label": "Industry Type",
+              "position": "left"
+            },
+            {
+              "type": "label",
+              "label": "Main Industry",
+              "position": "center"
+            },
+            {
+              "type": "label",
+              "label": "Industry Start Date",
+              "position": "center"
+            },
+            {
+              "type": "label",
+              "label": "action",
+              "position": "center"
+            },
+            {
+              "type": "label",
+              "label": "action",
+              "position": "center"
+            }
+          ],
+          "bodyList": [
+            {
+              "type": "text",
+              "position": "center",
+              "property": "RefIndustryTypeCode"
+            },
+            {
+              "type": "text",
+              "position": "left",
+              "property": "IndustryTypeName"
+            },
+            {
+              "type": "boolean",
+              "position": "center",
+              "property": "IsMain"
+            },
+            {
+              "type": "date",
+              "position": "center",
+              "property": "BusinessStartDate"
+            },
+            {
+              "type": "action",
+              "position": "center",
+              "action": [
+                {
+                  "type": "modal",
+                  "width": "80",
+                  "isTemplate": true,
+                  "component": "HsbIndustryDetail",
+                  "disableClose": false,
+                  "param": [
+                    {
+                      "type": "CustId",
+                      "property": "Custid"
+                    }
+                  ]
+                },
+                {
+                  "type": "delete",
+                  "property": "CustCompanyIndustryInfoXId"
+                }
+              ]
+            },
+            {
+              "type": "action",
+              "position": "center",
+              "action": [
+                {
+                  "icon": "bi-trash",
+                  "environment": "FoundationR3Url",
+                  "path": "/v1/CustCompanyIndustryInfoX/DeleteCustCompanyIndustryInfoXById",
+                  "reqObj": [
+                    {
+                      "propName": "Id",
+                      "propValue": "CustCompanyIndustryInfoXId"
+                    }
+                  ],
+                  "onSuccess": [
+                    {
+                      "result": {
+                        "type": "toaster",
+                        "mode": "success",
+                        "message": "success"
+                      },
+                      "conditions": []
+                    }
+                  ],
+                  "onError": {
+                    "type": "toaster",
+                    "message": ""
+                  },
+                  "type": "http"
+                },
+                {
+                  "type": "modal",
+                  "width": "80",
+                  "isTemplate": true,
+                  "component": "HsbIndustryDetail",
+                  "disableClose": false,
+                  "param": [
+                    {
+                      "type": "CustId",
+                      "property": "CustId"
+                    },
+                    {
+                      "type": "CustCompanyId",
+                      "property": "CustCompanyId"
+                    },
+                    {
+                      "type": "RefIndustryTypeCode",
+                      "property": "RefIndustryTypeCode"
+                    },
+                    {
+                      "type": "Notes",
+                      "property": "Notes"
+                    },
+                    {
+                      "type": "IsMain",
+                      "property": "IsMain"
+                    },
+                    {
+                      "type": "BusinessStartDate",
+                      "property": "BusinessStartDate"
+                    },
+                    {
+                      "type": "IndustryTypeName",
+                      "property": "IndustryTypeName"
+                    },
+                    {
+                      "type": "mode",
+                      "property": "edit"
+                    },
+                    {
+                      "type": "CustCompanyIndustryInfoXId",
+                      "property": "CustCompanyIndustryInfoXId"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "getData": {
+          "environment": "FoundationR3Url",
+          "apiPath": "/v1/CustCompanyIndustryInfoX/GetListCustCompanyIndustryInfoXByCustCompanyId",
+          "customObjName": "ReturnObject",
+          "reqObj": [
+            {
+              "isFromDict": false,
+              "propName": "Id",
+              "propValue": "CustCompanyId"
+            }
+          ],
+          "conditions": []
+        },
+        "deleteObj": {
+          "deleteEnvi": "FoundationR3Url",
+          "deleteApiPath": "/v1/BouwheerCompanyIndustryInfoX/DeleteCustCompanyIndustryInfoXById"
+        }
+      },
+      "id": "fde7f20e-b589-41e9-a6cd-63e804ac6fbc"
+    }
+  ]
+}

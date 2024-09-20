@@ -1,0 +1,142 @@
+{
+  "id": "VendorOfficeMemberPaging_CustomComp",
+  "name": "Vendor Office Member Paging Custom Component",
+  "saveState": false,
+  "customComponent": [
+    {
+      "paging": {
+        "environment": "FoundationR3Url",
+        "apiVersion": "v2",
+        "uri": "http://r3app-server.ad-ins.com/FOUNDATION_DEV",
+        "pagingInput": {
+          "title": "",
+          "sectionTitle": "",
+          "querystring": {
+            "name": "searchVendorOfficeMember"
+          },
+          "exportExcel": false,
+          "component": [
+            {
+              "id": "roofficeCodeSearchId",
+              "type": "textbox",
+              "label": "Office Code",
+              "name": "RO.OFFICE_CODE",
+              "value": "",
+              "placeholder": "",
+              "datatype": "text"
+            },
+            {
+              "id": "roofficeNameSearchId",
+              "type": "textbox",
+              "label": "Office Name",
+              "name": "RO.OFFICE_NAME",
+              "value": "",
+              "placeholder": "",
+              "datatype": "text"
+            },
+            {
+              "id": "roofficeAddrSearchId",
+              "type": "textbox",
+              "label": "Office Address",
+              "name": "RO.OFFICE_ADDR",
+              "value": "",
+              "placeholder": "",
+              "datatype": "text"
+            },
+            {
+              "id": "roisActiveSearchId",
+              "type": "textbox",
+              "label": "Active Status",
+              "name": "RO.IS_ACTIVE",
+              "value": "",
+              "placeholder": "",
+              "datatype": "text"
+            }
+          ],
+          "headerList": [
+            {
+              "type": "sort",
+              "label": "Office Code",
+              "position": "left",
+              "name": "RO.OFFICE_CODE"
+            },
+            {
+              "type": "sort",
+              "label": "Office Name",
+              "position": "left",
+              "name": "RO.OFFICE_NAME"
+            },
+            {
+              "type": "sort",
+              "label": "Office Address",
+              "position": "left",
+              "name": "RO.OFFICE_ADDR"
+            },
+            {
+              "type": "sort",
+              "label": "Active Status",
+              "position": "center",
+              "name": "RO.IS_ACTIVE"
+            },
+            {
+              "type": "label",
+              "label": "Action",
+              "position": "center"
+            }
+          ],
+          "bodyList": [
+            {
+              "type": "text",
+              "position": "left",
+              "property": "OfficeCode"
+            },
+            {
+              "type": "text",
+              "position": "left",
+              "property": "OfficeName"
+            },
+            {
+              "type": "text",
+              "position": "left",
+              "property": "OfficeAddr"
+            },
+            {
+              "type": "text",
+              "position": "center",
+              "property": "IsActive"
+            },
+            {
+              "type": "action",
+              "position": "center",
+              "action": [
+                {
+                  "type": "delete",
+                  "property": "VendorOfficeMbrId"
+                }
+              ]
+            }
+          ]
+        },
+        "criteria": [
+          {
+            "isFromDict": false,
+            "propName": "VOM.VENDOR_ID",
+            "restriction": "Eq",
+            "value": "VendorId"
+          }
+        ],
+        "whereValue": [],
+        "fromValue": [],
+        "useIntegration": false,
+        "isHideSearch": false,
+        "isSearched": false,
+        "delay": 1,
+        "deleteObj": {
+          "deleteEnvi": "FoundationR3Url",
+          "deleteApiPath": "/v1/VendorOfficeMbr/DeleteVendorOfficeMember"
+        }
+      },
+      "id": "446ed7ca-4c45-410b-bd58-1ae68c657a4b"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"templateId":"Reportarprojection","templateName":"ReportARProjection","template":[{"id":"ReportARProjection","component":[{"report":{"apiReportPath":"/Report/GenerateReportR3","pagingInput":{"title":"","reportName":"Report AR Projection","reportTemplateCode":"RPTARPROJECTION","component":[]}},"id":"6f090d2a-49a6-42e5-81dd-1bf9f2a35301"}],"conditionalTitle":[],"serviceUrl":{}}]}
